@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>WI Film Tax Credits | Wisconsin Film Production Tax Credit</title>
-  <meta name="description" content="Wisconsin's new film production tax credit returns 30% of qualified spend plus 100% of WI sales tax. Friendly help getting you qualified and paid." />
+  <meta name="description" content="Wisconsin's new film production tax credit returns 30% of qualified spend plus 100% of WI sales tax. I help producers qualify, apply, and get paid." />
   <link rel="canonical" href="https://wifilmtaxcredits.com/" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,16 +13,17 @@
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --cream:#FAF6EE;
-      --cream-2:#F4EDDD;
+      --cream:#FDFAF4;
+      --cream-2:#F5EFDF;
       --ink:#143025;
       --ink-2:#2E4A3E;
       --ink-soft:#5A6F62;
       --forest:#1F4D3A;
       --forest-deep:#143025;
       --gold:#C99441;
+      --gold-deep:#9E6B1E;
       --gold-soft:#E9B65B;
-      --rule:rgba(20,48,37,.12);
+      --rule:rgba(20,48,37,.1);
       --serif:'Fraunces',Georgia,serif;
       --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
     }
@@ -35,244 +36,191 @@
       line-height:1.6;
       font-size:17px;
     }
-    .wrap{max-width:1120px;margin:0 auto;padding:0 1.75rem}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 2rem}
 
     /* nav */
-    nav{padding:1.75rem 0;display:flex;justify-content:space-between;align-items:center}
+    nav{padding:2rem 0;display:flex;justify-content:space-between;align-items:center}
     .mark{
       font-family:var(--serif);font-weight:700;font-size:1.125rem;
       color:var(--forest);text-decoration:none;letter-spacing:-.01em;
     }
     .mark span{color:var(--gold)}
-    .nav-cta{
-      font-family:var(--sans);font-size:.9375rem;font-weight:600;
-      color:var(--forest);text-decoration:none;
-      padding:.55rem 1.1rem;border:1.5px solid var(--forest);border-radius:999px;
-      transition:background .2s,color .2s;
+    .nav-phone{
+      font-size:.9375rem;font-weight:500;color:var(--ink-2);text-decoration:none;
+      letter-spacing:.02em;
     }
-    .nav-cta:hover{background:var(--forest);color:var(--cream)}
+    .nav-phone:hover{color:var(--forest)}
 
     /* hero */
-    .hero{padding:4rem 0 5rem}
-    .pill{
-      display:inline-flex;align-items:center;gap:.55rem;
-      background:#fff;border:1px solid var(--rule);
-      padding:.5rem .95rem;border-radius:999px;
-      font-size:.8125rem;font-weight:500;color:var(--ink-2);
-      margin-bottom:2rem;
-      box-shadow:0 1px 0 rgba(20,48,37,.04);
+    .hero{
+      padding:4rem 0 5rem;
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr);
+      gap:4.5rem;
+      align-items:center;
     }
-    .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,148,65,.18)}
+    .hero-copy{max-width:38rem}
     h1{
       font-family:var(--serif);
       font-weight:500;
-      font-size:clamp(2.5rem,5.5vw,4.75rem);
+      font-size:clamp(2.5rem,4.8vw,4.25rem);
       line-height:1.02;
-      letter-spacing:-.02em;
+      letter-spacing:-.025em;
       color:var(--forest-deep);
-      max-width:14ch;
       margin-bottom:1.5rem;
     }
-    h1 .ink-gold{
-      font-style:italic;
-      color:var(--gold);
-      font-weight:400;
-    }
+    h1 em{font-style:italic;color:var(--gold-deep);font-weight:500}
     .lede{
-      font-size:1.1875rem;
+      font-size:1.125rem;
       color:var(--ink-soft);
-      max-width:38rem;
-      line-height:1.55;
-      margin-bottom:2.25rem;
+      max-width:34rem;
+      line-height:1.6;
+      margin-bottom:2rem;
     }
-    .lede strong{color:var(--ink);font-weight:600}
-    .actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    .actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+    .trust-line{
+      display:flex;gap:1.4rem;flex-wrap:wrap;
+      font-size:.8125rem;color:var(--ink-soft);letter-spacing:.01em;
+    }
+    .trust-line span{display:inline-flex;align-items:center;gap:.4rem}
+    .trust-line svg{width:14px;height:14px;color:var(--gold-deep);flex-shrink:0}
     .btn{
       display:inline-flex;align-items:center;gap:.65rem;
       background:var(--forest);
       color:var(--cream);
-      padding:1.05rem 1.85rem;
+      padding:1.1rem 2rem;
       font-weight:600;font-size:1rem;
       text-decoration:none;
       border-radius:999px;
       transition:background .2s,transform .15s,box-shadow .2s;
-      box-shadow:0 6px 20px -8px rgba(20,48,37,.35);
+      box-shadow:0 4px 16px -6px rgba(20,48,37,.3);
     }
-    .btn:hover{background:var(--forest-deep);transform:translateY(-1px);box-shadow:0 10px 24px -8px rgba(20,48,37,.45)}
+    .btn:hover{background:var(--forest-deep);transform:translateY(-1px);box-shadow:0 8px 22px -6px rgba(20,48,37,.4)}
     .btn svg{width:16px;height:16px}
-    .btn-link{
+    .btn-ghost{
       font-size:.9375rem;font-weight:500;color:var(--ink-2);
-      text-decoration:none;
+      text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:.1rem;
     }
-    .btn-link:hover{color:var(--forest)}
+    .btn-ghost:hover{color:var(--forest);border-color:var(--forest)}
 
-    /* big number callout under hero */
-    .headline-num{
-      margin-top:5rem;
-      display:grid;
-      grid-template-columns:auto 1fr;
-      align-items:center;
-      gap:2.5rem;
-      padding-top:3rem;
-      border-top:1px solid var(--rule);
+    /* hero stat — the 30% lives inside the hero as the right-column anchor */
+    .hero-stat{
+      position:relative;
+      padding:2.25rem 2rem 2.25rem 2.5rem;
+      border-left:1px solid var(--rule);
     }
-    .headline-num .num{
-      font-family:var(--serif);
-      font-weight:500;
-      font-size:clamp(7rem,16vw,13rem);
-      line-height:.85;
-      letter-spacing:-.04em;
+    .hero-stat .big{
+      font-family:var(--serif);font-weight:500;
+      font-size:clamp(8rem,13vw,12rem);
+      line-height:.88;letter-spacing:-.045em;
       color:var(--forest);
+      display:block;
     }
-    .headline-num .num em{
-      font-style:italic;
-      color:var(--gold);
-      font-weight:400;
-      font-size:.55em;
-      vertical-align:.35em;
+    .hero-stat .big em{
+      font-style:italic;color:var(--gold-deep);font-weight:500;
+      font-size:.58em;margin-left:.04em;letter-spacing:-.02em;
     }
-    .headline-num .desc{
-      font-family:var(--serif);
-      font-size:1.5rem;
-      line-height:1.35;
-      color:var(--ink-2);
-      max-width:24rem;
-      font-weight:400;
+    .hero-stat .big .sup{
+      font-family:var(--serif);font-style:normal;font-weight:500;
+      color:var(--forest);font-size:.28em;
+      vertical-align:.08em;margin-left:-.15em;letter-spacing:0;
     }
-    .headline-num .desc b{color:var(--forest);font-weight:600}
+    .hero-stat .txt{
+      margin-top:1.25rem;
+      font-family:var(--serif);font-size:1.1875rem;line-height:1.4;
+      color:var(--ink-2);max-width:22rem;font-weight:400;
+    }
+    .hero-stat .txt strong{color:var(--forest);font-weight:600}
 
-    /* perks row */
-    .perks{
-      padding:5rem 0;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.25rem;
-    }
+    /* perks */
+    .perks{padding:5rem 0 5.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
     .perk{
-      background:#fff;
-      border:1px solid var(--rule);
-      border-radius:18px;
-      padding:1.85rem 1.75rem;
-      transition:transform .2s,box-shadow .2s;
+      background:#fff;border:1px solid var(--rule);border-radius:20px;
+      padding:2rem 1.75rem;
+      transition:border-color .2s,transform .2s,box-shadow .2s;
     }
-    .perk:hover{transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(20,48,37,.25)}
-    .perk .icon{
-      width:42px;height:42px;border-radius:12px;
-      background:var(--cream-2);
-      display:flex;align-items:center;justify-content:center;
-      color:var(--gold);
-      margin-bottom:1.25rem;
-    }
-    .perk .icon svg{width:22px;height:22px}
+    .perk:hover{border-color:rgba(20,48,37,.2);transform:translateY(-2px);box-shadow:0 12px 28px -18px rgba(20,48,37,.25)}
+    .perk .eyebrow{margin-bottom:.75rem}
     .perk h3{
       font-family:var(--serif);font-weight:600;
-      font-size:1.375rem;color:var(--forest-deep);
-      margin-bottom:.5rem;letter-spacing:-.01em;
+      font-size:1.25rem;color:var(--forest-deep);
+      margin-bottom:.65rem;letter-spacing:-.01em;
     }
     .perk p{color:var(--ink-soft);font-size:.9375rem;line-height:1.55}
 
     /* qualifies */
     .qualifies{
-      padding:5rem 0;
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:4rem;
-      align-items:center;
-      border-top:1px solid var(--rule);
+      padding:5rem 0;border-top:1px solid var(--rule);
+      display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
     }
     .qualifies h2{
       font-family:var(--serif);font-weight:500;
-      font-size:clamp(2rem,3.6vw,3rem);
-      line-height:1.05;letter-spacing:-.02em;
-      color:var(--forest-deep);
-      margin-bottom:1.25rem;
+      font-size:clamp(2rem,3.5vw,2.75rem);
+      line-height:1.08;letter-spacing:-.02em;color:var(--forest-deep);
+      margin-bottom:1rem;
     }
     .qualifies h2 em{font-style:italic;color:var(--gold);font-weight:400}
-    .qualifies > div > p{
-      color:var(--ink-soft);font-size:1.0625rem;
-    }
-    .chips{display:flex;flex-wrap:wrap;gap:.65rem}
+    .qualifies > div > p{color:var(--ink-soft);font-size:1rem;line-height:1.6}
+    .chips{display:flex;flex-wrap:wrap;gap:.6rem}
     .chip{
-      background:#fff;
-      border:1px solid var(--rule);
-      padding:.7rem 1.15rem;
-      border-radius:999px;
-      font-size:.9375rem;color:var(--ink-2);font-weight:500;
+      background:#fff;border:1px solid var(--rule);
+      padding:.65rem 1.1rem;border-radius:999px;
+      font-size:.875rem;color:var(--ink-2);font-weight:500;
     }
-    .chip b{color:var(--forest);font-weight:600}
 
     /* steps */
     .steps{padding:5rem 0;border-top:1px solid var(--rule)}
-    .steps-head{
-      display:flex;justify-content:space-between;align-items:flex-end;
-      margin-bottom:3rem;gap:2rem;flex-wrap:wrap;
-    }
-    .steps-head h2{
+    .steps h2{
       font-family:var(--serif);font-weight:500;
-      font-size:clamp(2rem,3.6vw,3rem);
-      line-height:1.05;letter-spacing:-.02em;
-      color:var(--forest-deep);max-width:18ch;
+      font-size:clamp(2rem,3.5vw,2.75rem);
+      line-height:1.08;letter-spacing:-.02em;color:var(--forest-deep);
+      margin-bottom:2.5rem;
     }
-    .steps-head h2 em{font-style:italic;color:var(--gold);font-weight:400}
-    .steps-head p{color:var(--ink-soft);max-width:22rem;font-size:.9375rem}
-    .steps-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.25rem;
-    }
-    .step{
-      background:#fff;
-      border:1px solid var(--rule);
-      border-radius:18px;
-      padding:1.85rem 1.75rem;
-    }
+    .steps h2 em{font-style:italic;color:var(--gold);font-weight:400}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .step{background:#fff;border:1px solid var(--rule);border-radius:20px;padding:2rem 1.75rem}
     .step .n{
-      font-family:var(--serif);font-style:italic;
-      font-size:1.5rem;color:var(--gold);font-weight:500;
-      margin-bottom:.85rem;display:block;
+      font-family:var(--serif);font-style:italic;font-size:2rem;
+      color:var(--gold);font-weight:400;margin-bottom:.75rem;display:block;line-height:1;
     }
     .step h4{
       font-family:var(--serif);font-weight:600;
-      font-size:1.1875rem;color:var(--forest-deep);
-      margin-bottom:.4rem;
+      font-size:1.125rem;color:var(--forest-deep);margin-bottom:.4rem;
     }
     .step p{color:var(--ink-soft);font-size:.9375rem;line-height:1.5}
 
     /* contact */
     .contact{
-      margin:5rem 0 6rem;
-      background:linear-gradient(135deg,var(--forest) 0%,var(--forest-deep) 100%);
+      margin:5rem 0;
+      background:var(--forest);
       color:var(--cream);
       border-radius:28px;
       padding:5rem 3rem;
       text-align:center;
-      position:relative;
-      overflow:hidden;
+      position:relative;overflow:hidden;
     }
     .contact::before{
       content:"";position:absolute;inset:0;
-      background:radial-gradient(600px 300px at 20% -20%,rgba(201,148,65,.18),transparent 60%),
-                 radial-gradient(500px 300px at 110% 120%,rgba(201,148,65,.10),transparent 60%);
+      background:radial-gradient(600px 400px at 30% -30%,rgba(201,148,65,.15),transparent 60%);
       pointer-events:none;
     }
     .contact > *{position:relative;z-index:1}
-    .contact .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:var(--cream)}
     .contact h2{
       font-family:var(--serif);font-weight:500;
-      font-size:clamp(2rem,4vw,3.25rem);
+      font-size:clamp(2.25rem,4vw,3.25rem);
       line-height:1.05;letter-spacing:-.02em;
-      max-width:22ch;margin:0 auto 1.25rem;
+      max-width:18ch;margin:0 auto 1.25rem;
     }
     .contact h2 em{font-style:italic;color:var(--gold-soft);font-weight:400}
-    .contact p{color:rgba(250,246,238,.8);max-width:34rem;margin:0 auto 2.25rem;font-size:1.0625rem}
+    .contact p{color:rgba(253,250,244,.75);max-width:30rem;margin:0 auto 2.5rem;font-size:1.0625rem}
     .contact .btn{background:var(--gold);color:var(--forest-deep)}
     .contact .btn:hover{background:var(--gold-soft)}
-    .contact .email-line{
+    .contact .phone{
       display:block;margin-top:1.5rem;
-      font-family:var(--serif);font-style:italic;font-size:1.125rem;
-      color:var(--gold-soft);text-decoration:none;
+      font-family:var(--serif);font-size:1.25rem;
+      color:var(--gold-soft);text-decoration:none;letter-spacing:.01em;
     }
-    .contact .email-line:hover{color:var(--cream)}
+    .contact .phone:hover{color:var(--cream)}
 
     footer{
       padding:2.5rem 0 3rem;border-top:1px solid var(--rule);
@@ -280,18 +228,42 @@
       font-size:.8125rem;color:var(--ink-soft);
     }
     footer a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule)}
+    .eyebrow{
+      display:block;font-size:.6875rem;font-weight:600;letter-spacing:.16em;
+      text-transform:uppercase;color:var(--gold);margin-bottom:1rem;
+    }
+    .qual-list{color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-top:1.25rem}
 
-    @media (max-width:860px){
+    /* tablet */
+    @media (max-width:1020px){
+      .hero{grid-template-columns:1fr;gap:3rem;padding:3.5rem 0 4rem}
+      .hero-copy{max-width:none}
+      .hero-stat{
+        padding:2.25rem 0 0;
+        border-left:0;border-top:1px solid var(--rule);
+        display:grid;grid-template-columns:auto 1fr;align-items:center;gap:2.5rem;
+      }
+      .hero-stat .big{font-size:clamp(6.5rem,15vw,10rem)}
+      .hero-stat .txt{margin-top:0}
+      .perks{padding:4.5rem 0}
+    }
+    /* mobile */
+    @media (max-width:680px){
       .wrap{padding:0 1.25rem}
       nav{padding:1.25rem 0}
-      .hero{padding:2.5rem 0 3.5rem}
-      .headline-num{margin-top:3rem;grid-template-columns:1fr;gap:1.25rem;padding-top:2rem}
-      .headline-num .desc{font-size:1.25rem}
-      .perks{padding:3rem 0;grid-template-columns:1fr;gap:1rem}
-      .qualifies{padding:3rem 0;grid-template-columns:1fr;gap:2rem}
-      .steps{padding:3rem 0}
+      .hero{padding:2.5rem 0 3.5rem;gap:2.5rem}
+      h1{font-size:clamp(2.25rem,9vw,3rem)}
+      .lede{font-size:1.0625rem}
+      .trust-line{gap:.9rem;font-size:.78125rem}
+      .hero-stat{grid-template-columns:1fr;gap:1rem;padding-top:2rem}
+      .hero-stat .big{font-size:clamp(5.5rem,22vw,7.5rem)}
+      .hero-stat .txt{font-size:1.0625rem}
+      .perks{padding:3.5rem 0 4rem;grid-template-columns:1fr;gap:1rem}
+      .qualifies{padding:3.5rem 0;grid-template-columns:1fr;gap:2rem}
+      .steps{padding:3.5rem 0}
       .steps-grid{grid-template-columns:1fr}
-      .contact{padding:3.25rem 1.5rem;margin:3rem 0 4rem;border-radius:22px}
+      .contact{padding:3.5rem 1.5rem;margin:3.5rem 0;border-radius:22px}
+      .actions{gap:1.25rem}
       footer{flex-direction:column;text-align:center}
     }
   </style>
@@ -301,107 +273,103 @@
   <div class="wrap">
     <nav>
       <a href="#" class="mark">WI Film <span>Tax Credits</span></a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a href="tel:6082126930" class="nav-phone">608-212-6930</a>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
-      <h1>Filming in Wisconsin? <span class="ink-gold">Let's get you paid back.</span></h1>
-      <p class="lede">Wisconsin just rolled out a brand-new film production tax credit. I'll help you figure out what your project qualifies for, package the application, and walk you across the finish line. <strong>Free first read, no pressure.</strong></p>
-      <div class="actions">
-        <a class="btn" href="#contact">
-          Tell me about your project
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <a class="btn-link" href="#perks">See what's on the table →</a>
+      <div class="hero-copy">
+        <h1>Filming in Wisconsin? <em>Get paid back.</em></h1>
+        <p class="lede">Wisconsin has a new film production tax credit. I help producers figure out what they qualify for, put the application together, and get the money back.</p>
+        <div class="actions">
+          <a class="btn" href="tel:6082126930">
+            Call me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <a class="btn-ghost" href="#credits">How the credit works</a>
+        </div>
+        <div class="trust-line">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Free first call
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            CPA-verified reports
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Usually reply same day
+          </span>
+        </div>
       </div>
-
-      <div class="headline-num">
-        <div class="num">30<em>%</em></div>
-        <div class="desc">back on qualified Wisconsin wages and production spend — <b>plus a 100% credit on the sales &amp; use tax</b> you pay along the way.</div>
-      </div>
+      <aside class="hero-stat" id="credits" aria-label="30 percent tax credit">
+        <span class="big">30<em>%</em></span>
+        <p class="txt"><strong>Back</strong> on qualified Wisconsin production spend — <strong>plus 100% of the sales and use tax</strong> you pay along the way.</p>
+      </aside>
     </section>
 
-    <!-- PERKS -->
-    <section class="perks" id="perks">
+    <section class="perks">
       <div class="perk">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>30% on production</h3>
-        <p>Wisconsin returns 30% of qualified in-state wages and production spend through the Film Production Services Credit.</p>
+        <span class="eyebrow">The credit</span>
+        <h3>30% Production Credit</h3>
+        <p>The Film Production Services Credit returns 30% of qualified in-state wages and spending. Refundable and nonrefundable components.</p>
       </div>
       <div class="perk">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-        </div>
-        <h3>100% sales tax back</h3>
-        <p>Get an income/franchise credit equal to the full Wisconsin sales and use tax you pay on qualifying purchases.</p>
+        <span class="eyebrow">Sales tax</span>
+        <h3>100% Sales Tax Credit</h3>
+        <p>A separate income/franchise credit covers the full Wisconsin sales and use tax you pay on qualifying production purchases.</p>
       </div>
       <div class="perk">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg>
-        </div>
+        <span class="eyebrow">The caps</span>
         <h3>Up to $1M per project</h3>
-        <p>Each project can receive up to $1M in credits, with $5M available statewide each year — early applications matter.</p>
+        <p>Per-applicant cap is $1 million. Only $5M available statewide each year, so early applications have a real advantage.</p>
       </div>
     </section>
 
-    <!-- QUALIFIES -->
     <section class="qualifies">
       <div>
-        <h2>Does your project <em>fit?</em></h2>
-        <p>If you're spending real money in Wisconsin on something audiences will see, there's a good chance it does. Minimum spend is just <strong style="color:var(--ink)">$100k</strong> for projects 30 minutes or longer, or <strong style="color:var(--ink)">$50k</strong> for shorter works.</p>
+        <span class="eyebrow">Eligibility</span>
+        <h2>Does your project <em>qualify?</em></h2>
+        <p>If you're spending money in Wisconsin on something people will watch, it probably does. Minimum is $100k for projects over 30 minutes, $50k for shorter works.</p>
       </div>
-      <div class="chips">
-        <span class="chip">🎬 Feature films</span>
-        <span class="chip">📺 Scripted TV</span>
-        <span class="chip">🎤 Unscripted TV</span>
-        <span class="chip">🎥 Documentaries</span>
-        <span class="chip">📽 Short films</span>
-        <span class="chip">📣 Broadcast advertising</span>
-      </div>
+      <p class="qual-list">Feature films, scripted TV, unscripted TV, documentaries, short films, and broadcast advertising.</p>
     </section>
 
-    <!-- STEPS -->
     <section class="steps">
-      <div class="steps-head">
-        <h2>How it <em>actually</em> works</h2>
-        <p>Applications are reviewed every month. The earlier you start, the smoother it goes.</p>
-      </div>
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps to <em>your credit.</em></h2>
       <div class="steps-grid">
         <div class="step">
-          <span class="n">01</span>
-          <h4>We talk it through</h4>
-          <p>Free consult. Tell me about the project, the budget, and the production. I'll tell you what you can realistically claim.</p>
+          <span class="n">1</span>
+          <h4>We build a game plan</h4>
+          <p>We look at your budget, your crew, your timeline. I'll map out exactly how to structure payroll and vendors to maximize what you capture.</p>
         </div>
         <div class="step">
-          <span class="n">02</span>
-          <h4>I package it up</h4>
-          <p>Application, supporting docs, accreditation letter from Film Wisconsin. You stay focused on making the thing.</p>
+          <span class="n">2</span>
+          <h4>I run the paperwork</h4>
+          <p>Application, documentation, accreditation from Film Wisconsin — all handled while you stay focused on making something great.</p>
         </div>
         <div class="step">
-          <span class="n">03</span>
-          <h4>You get paid</h4>
-          <p>After wrap, a CPA-verified expenditure report goes in. Film Wisconsin issues your certificate. Credit hits your return.</p>
+          <span class="n">3</span>
+          <h4>The credit lands</h4>
+          <p>After wrap, a CPA-verified report goes to Film Wisconsin. They issue your certificate, and the credit shows up on your Wisconsin tax return.</p>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h2>Let's talk about <em>your project.</em></h2>
-      <p>Send a quick note — what you're making, when you're filming, roughly what you're spending. I'll come back with a straight answer about what it's worth.</p>
-      <a class="btn" href="mailto:hello@wifilmtaxcredits.com?subject=Wisconsin%20Film%20Tax%20Credit%20Inquiry">
-        Email me
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      <h2>Tell me about <em>your project.</em></h2>
+      <p>What are you making, when are you filming, and roughly what are you spending in Wisconsin? Happy to take a look and let you know what's possible.</p>
+      <a class="btn" href="tel:6082126930">
+        608-212-6930
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </a>
-      <a class="email-line" href="mailto:hello@wifilmtaxcredits.com">hello@wifilmtaxcredits.com</a>
+      <a class="phone" href="mailto:hello@wifilmtaxcredits.com">hello@wifilmtaxcredits.com</a>
     </section>
 
     <footer>
       <div>&copy; <span id="y">2026</span> WI Film Tax Credits</div>
-      <div>Independent consulting · Not affiliated with <a href="https://industry.travelwisconsin.com/about-us/film-wisconsin">Film Wisconsin</a> or the State of Wisconsin</div>
+      <div>Independent advisor · <a href="https://industry.travelwisconsin.com/about-us/film-wisconsin">Film Wisconsin</a> is the state program administrator</div>
     </footer>
   </div>
 
