@@ -130,5 +130,12 @@ check('robots points at this site, not Illinois',
     readFileSync(new URL('../public/robots.txt', import.meta.url), 'utf8')
         .includes('wifilmtaxcredits.com/sitemap.xml'), true);
 
+// Without this, Pages answers every unknown path with the homepage and a 200,
+// which also swallows robots.txt and sitemap.xml.
+const wrangler = readFileSync(new URL('../wrangler.jsonc', import.meta.url), 'utf8');
+check('unknown paths are configured to 404', wrangler.includes('"not_found_handling": "404-page"'), true);
+check('and the project name matches the Pages project',
+    wrangler.includes('"name": "wifilmtaxcredits-website"'), true);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

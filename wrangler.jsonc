@@ -1,0 +1,11 @@
+{
+  "name": "wifilmtaxcredits-website",
+  "compatibility_date": "2025-10-31",
+  "assets": {
+    "directory": "./dist",
+    // Without this, any unmatched path returns the homepage with a 200: a soft
+    // 404 that lets crawlers index unlimited duplicate URLs, and that also made
+    // robots.txt and sitemap.xml unreachable because they resolved to the page.
+    "not_found_handling": "404-page"
+  }
+}
