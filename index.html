@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>WI Film Tax Credits | Wisconsin Film Production Tax Credit</title>
-  <meta name="description" content="Wisconsin's new film production tax credit returns 30% of qualified spend plus 100% of WI sales tax. I help producers qualify, apply, and get paid." />
+  <meta name="description" content="Wisconsin's new film production tax credit returns 30% of qualified spend plus 100% of WI sales tax. We help producers qualify, apply, and get paid." />
   <link rel="canonical" href="https://wifilmtaxcredits.com/" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -215,6 +215,33 @@
     .contact p{color:rgba(253,250,244,.75);max-width:30rem;margin:0 auto 2.5rem;font-size:1.0625rem}
     .contact .btn{background:var(--gold);color:var(--forest-deep)}
     .contact .btn:hover{background:var(--gold-soft)}
+    .sr-only{
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;
+    }
+    .contact-form{
+      display:flex;flex-direction:column;gap:.75rem;
+      max-width:30rem;margin:0 auto;
+    }
+    .contact-form input,.contact-form textarea{
+      font-family:inherit;font-size:1rem;
+      padding:.85rem 1rem;border-radius:12px;
+      border:1px solid rgba(253,250,244,.25);
+      background:rgba(253,250,244,.06);color:var(--cream);
+      resize:vertical;
+    }
+    .contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(253,250,244,.45)}
+    .contact-form input:focus,.contact-form textarea:focus{
+      outline:2px solid var(--gold);outline-offset:-1px;background:rgba(253,250,244,.1);
+    }
+    .contact-form .btn{justify-content:center;border:0;cursor:pointer;font-family:inherit}
+    .contact-form .btn:disabled{opacity:.6;cursor:default;transform:none}
+    .form-feedback{
+      min-height:1.25rem;font-size:.875rem;margin:0;
+      color:rgba(253,250,244,.75);
+    }
+    .form-feedback.error{color:var(--gold-soft)}
+    .form-feedback.success{color:var(--gold-soft)}
     .contact .phone{
       display:block;margin-top:1.5rem;
       font-family:var(--serif);font-size:1.25rem;
@@ -295,24 +322,24 @@
   <div class="wrap">
     <nav>
       <a href="#" class="mark">WI Film <span>Tax Credits</span></a>
-      <a href="tel:6082126930" class="nav-phone">608-212-6930</a>
+      <a href="mailto:hello@wifilmtaxcredits.com" class="nav-phone">hello@wifilmtaxcredits.com</a>
     </nav>
 
     <section class="hero">
       <div class="hero-copy">
         <h1>Filming in Wisconsin? <em>Get paid back.</em></h1>
-        <p class="lede">Wisconsin has a new film production tax credit. I help producers figure out what they qualify for, put the application together, and get the money back.</p>
+        <p class="lede">Wisconsin has a new film production tax credit. We help producers figure out what they qualify for, put the application together, and get the money back.</p>
         <div class="actions">
-          <a class="btn" href="tel:6082126930">
-            Call me
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a class="btn" href="#contact">
+            Tell us about your project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a class="btn-ghost" href="#credits">How the credit works</a>
         </div>
         <div class="trust-line">
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Free first call
+            Free first look
           </span>
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -320,7 +347,7 @@
           </span>
           <span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Usually reply same day
+            Quick response
           </span>
         </div>
       </div>
@@ -364,11 +391,11 @@
         <div class="step">
           <span class="n">1</span>
           <h4>We build a game plan</h4>
-          <p>We look at your budget, your crew, your timeline. I'll map out exactly how to structure payroll and vendors to maximize what you capture.</p>
+          <p>We look at your budget, your crew, your timeline, and map out exactly how to structure payroll and vendors to maximize what you capture.</p>
         </div>
         <div class="step">
           <span class="n">2</span>
-          <h4>I run the paperwork</h4>
+          <h4>We run the paperwork</h4>
           <p>Application, documentation, accreditation from Film Wisconsin, all handled while you stay focused on making something great.</p>
         </div>
         <div class="step">
@@ -380,13 +407,19 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2>Tell me about <em>your project.</em></h2>
-      <p>What are you making, when are you filming, and roughly what are you spending in Wisconsin? Happy to take a look and let you know what's possible.</p>
-      <a class="btn" href="tel:6082126930">
-        608-212-6930
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-      <a class="phone" href="mailto:hello@wifilmtaxcredits.com">hello@wifilmtaxcredits.com</a>
+      <h2>Tell us about <em>your project.</em></h2>
+      <p>What are you making, when are you filming, and roughly what are you spending in Wisconsin? We'll take a look and let you know what's possible.</p>
+      <form class="contact-form" id="contact-form" novalidate>
+        <label class="sr-only" for="contact-email">Your email address</label>
+        <input id="contact-email" name="email" type="email" required autocomplete="email"
+               placeholder="you@example.com" />
+        <label class="sr-only" for="contact-note">About your project</label>
+        <textarea id="contact-note" name="note" rows="3"
+                  placeholder="What you are making, when you are filming, roughly what you expect to spend in Wisconsin. Optional."></textarea>
+        <button type="submit" class="btn" id="contact-submit">Send</button>
+        <p class="form-feedback" id="contact-feedback" role="status" aria-live="polite"></p>
+      </form>
+      <a class="phone" href="tel:6082126930">Or call 608-212-6930</a>
     </section>
 
     <footer>
@@ -396,5 +429,52 @@
   </div>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var emailInput = document.getElementById('contact-email');
+      var noteInput = document.getElementById('contact-note');
+      var button = document.getElementById('contact-submit');
+      var feedback = document.getElementById('contact-feedback');
+
+      function say(message, kind) {
+        feedback.textContent = message;
+        feedback.className = 'form-feedback' + (kind ? ' ' + kind : '');
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = (emailInput.value || '').trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          say('Please enter a valid email address.', 'error');
+          emailInput.focus();
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+        say('');
+
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, note: (noteInput.value || '').trim() })
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error('send failed');
+            form.reset();
+            say('Thanks. We will come back to you shortly.', 'success');
+          })
+          .catch(function () {
+            say('That did not send. Email hello@wifilmtaxcredits.com directly and it will reach us.', 'error');
+          })
+          .then(function () {
+            button.disabled = false;
+            button.textContent = 'Send';
+          });
+      });
+    })();
+  </script>
 </body>
 </html>
