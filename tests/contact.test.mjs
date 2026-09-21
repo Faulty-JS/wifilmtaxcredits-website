@@ -127,7 +127,7 @@ check('the form asks for an email', html.includes('id="contact-email"'), true);
 check('every input has a label', (html.match(/<label/g) || []).length >= 2, true);
 check('no em dashes in the page', /—/.test(html), false);
 check('robots points at this site, not Illinois',
-    readFileSync(new URL('../public/robots.txt', import.meta.url), 'utf8')
+    readFileSync(new URL('../robots.txt', import.meta.url), 'utf8')
         .includes('wifilmtaxcredits.com/sitemap.xml'), true);
 
 // Without this, Pages answers every unknown path with the homepage and a 200,
